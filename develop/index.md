@@ -53,7 +53,7 @@ Here is where you will write an abstract about the course. This is an example of
     :woman_student: **Level:** Beginner/Intermediate/Advanced
     [comment]: # (Property in Bioschema: educationalLevel)
 
-    :lock: **License:** [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/) :custom-by:
+    :lock: **License:** [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
     [comment]: # (Property in Biochema: licence)
     
     :coin: **Funding:** This project was funded by the Novo Nordisk Fonden (NNF20OC0063268).
