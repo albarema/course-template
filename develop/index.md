@@ -44,8 +44,10 @@ Here is where you will write an abstract about the course. This is an example of
     2. Second item  
 
     :clock: **Total Time Estimation:** X hours  
+    [comment]: # (No Property in Bioschema)
 
     :file_folder: **Supporting Materials:**  
+    [comment]: # (Property in Bioschema: mentions)
 
     :man_technologist: **Target Audience:** PhD, MsC, etc.
     [comment]: # (Property in Bioschema: audience)
@@ -53,7 +55,7 @@ Here is where you will write an abstract about the course. This is an example of
     :woman_student: **Level:** Beginner/Intermediate/Advanced
     [comment]: # (Property in Bioschema: educationalLevel)
 
-    :lock: **License:** [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
+    :lock: **License:** [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license.](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
     [comment]: # (Property in Biochema: licence)
     
     :coin: **Funding:** This project was funded by the Novo Nordisk Fonden (NNF20OC0063268).
