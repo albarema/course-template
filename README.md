@@ -12,11 +12,12 @@ pip install mkdocs-material
 pip install mkdocs-video
 pip install mkdocs-bibtex 
 pip install neoteroi-mkdocs
+pip install mkdocs-minify-plugin
 ```
 
 ## Usage
 
-I would recommend that all the webpage source materials should be saved in an independent branch of the repo (maybe call it webapage). The template should look like this:
+I would recommend that all the webpage source materials should be saved in an independent branch of the repo (in this template it is called "webpage"). The template should look like this:
 
 ```
 course-template/
@@ -31,8 +32,6 @@ course-template/
     |   |   |-> neoteroi-mkdocs.css # formatting of the social cards
     |   |   
     |   |-> *.md # These will be individual webpages that should be inside the mkdocs.yml navigation tree
-    |
-    |-> docs/ # This folder contains the built webpage
     |
     |-> overrides/ # This folder overrides basic html templates
     |
@@ -51,21 +50,18 @@ mkdocs serve
 **NOTE**: remember to set the working directory to {course-name} general folder, otherwise mkdocs will not be able to find the mkdocs.yml file.
 
 This will prompt a local link were you can check how the webpage will look (usually it is http://127.0.0.1:8000/). 
-Then, if you are happy with how it looks, you can build the website:
 
-```bash
-mkdocs build
-```
+Now, the template has a github workflow that will automatically build and deploy the webpage whenever you push a commit to the "webpage" branch. The workflow uses [`mkdocs gh-deploy`](https://www.mkdocs.org/user-guide/deploying-your-docs/), meaning that it will automatically get all the info from the webpage branch and deploy the website to the branch gh-pages. We do it this way to separate the webpage material from the workshop material. 
 
-This will create the webpage in the `docs` folder. It is necessary that the webpage is created in this folder so that Github Pages can fetch it properly. To set up the Github Pages, go to the **`Settings`** of the repo in [github.com](https://github.com/). Then click on **`Pages`** and set up the **`Build and deployment section`** as below:
+Finally we only need to make sure that we have set up the Github Pages properly. Go to the **`Settings`** of the repo in [github.com](https://github.com/). Then click on **`Pages`** and set up the **`Build and deployment section`** as below:
 
 ![](./develop/images/git_pages.png)
 
 Where:
 -   **`Source`** is *`Deploy from a branch`*
 -   In **`Branch`**:
-    -   **`Select branch`** is *`webpage`* or the name of the branch were this material is
-    -   **`Select folder`** is *`/docs`*
+    -   **`Select branch`** is *`gh-pages`* or the name of the branch were this material is
+    -   **`Select folder`** is *`/root`*
 
 When you click on **`Save`**, the webpage should be activated shortly afterwards in the displayed at the top.
 
