@@ -65,37 +65,67 @@ Where:
 
 When you click on **`Save`**, the webpage should be activated shortly afterwards in the displayed at the top.
 
+### Setting Github actions for automatic deployment 
+
+Go to settings and select Actions -> General in the left side menu
+
+[](./develop/images/settings_actions.png)
+
+1. at the top under `Actions permissions` check the option "Allow all actions and reusable workflows"     
+2. scroll down to `Workflow permissions`and check the option "Read and Write permissions" 
+
+### Add URL to About section of the repository
+
+1. Click on `About`settings wheel on the right side
+    
+    [](./develop/images/about_settings.png)
+   
+2. In the pop-up `Edit repository details`: 
+    1. tick the `Use your GitHub Pages website` to automatically fill the Website URL 
+    
+    [](./develop/images/about_settings2.png)
+
+    2. press `Save changes`
+
+
+### Update mkdocs.yml file
+
+Edit the mkdocs.yml file as necessary.
+
 ### Bioschemas
 
 The file `overrides/main.html` will override a block of the generated html files to add a bioschema to the webpage. 
 A [Bioschema](https://bioschemas.org/) aims to improve the Findability on the Web of life sciences resources such as datasets, software, and training materials, adhering it to FAIR data principles.
 
-I have made a template with the bioschema "Course" that contains a the mandatory fields and a couple of recommeded ones. You must change all the fields where the text starts with a `#`, for example:
+I have made a template with the bioschema "LearningResources" that contains a the mandatory fields and a couple of recommeded ones. You must change all the fields where the text starts with a `#`, for example:
 
 ```
- "@context": "https://schema.org",
-  "@id": "https://hds-sandbox.github.io/#your-course-name",
-  "@type": "Course",
-  "coursePrerequisites": [
-    "#Prerequisite 1",
-    "#Prerequisite 2",
-    "#Prerequisite 3"
+"@context": "https://schema.org",
+      "@id": "# Put here the course webpage (https://hds-sandbox.github.io/bulk_RNAseq_course/)",
+      "@type": "LearningResource",
+      "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "description": "# Course description",
+      "keywords": [
+        "# Keyword1, Keyword2, etc"
+      ],
+      "learningResourceType": [
+        "e-Learning"
 ```
 
 Preserve the quotes and exchange those fields for the appropiate ones in your course:
 
 ```
 "@context": "https://schema.org",
-  "@id": "https://hds-sandbox.github.io/bulk_RNAseq_course/",
-  "@type": "Course",
-  "coursePrerequisites": [
-    "Knowledge of R, Rstudio and Rmarkdown",
-    "Basic knowledge of RNAseq technology",
-    "Basic knowledge of data science and statistics such as PCA, clustering and statistical testing"
-  ],
+      "@id": "https://hds-sandbox.github.io/bulk_RNAseq_course/",
+      "@type": "LearningResource",
+      "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "description": "This workshop includes a tutorial on how to approach RNAseq data, starting from your sequencing reads (fastq files). Thus, the workshop only briefly touches upon laboratory protocols, library preparation, and experimental design of RNA sequencing experiments, mainly for the purpose of outlining considerations in the downstream bioinformatic analysis. This workshop is based on the materials developed by members of the teaching team at the Harvard Chan Bioinformatics Core (HBC), a collection of modified tutorials from the DESeq2, R language vignettes and the nf-core rnaseq pipeline.",
+      "keywords": [
+        "bioinformatics, RNAseq, bulk, NGS"
+      ],
 ```
 
-Once you build and push the new webpage to GitHub Pages, you can test that the bioschema works by using a [schema validator](https://validator.schema.org/) and entering the url of the webpage (for example: https://hds-sandbox.github.io/bulk_RNAseq_course/)
+Once you commit to the webpage branch and the workflow deploys the website to GitHub Pages, you can test that the bioschema works by using a [schema validator](https://validator.schema.org/) and entering the url of the webpage (for example: https://hds-sandbox.github.io/bulk_RNAseq_course/)
 
 ![](./develop/images/bioschema_validator.png)
 
