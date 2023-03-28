@@ -78,12 +78,12 @@ Go to settings and select Actions -> General in the left side menu
 
 1. Click on `About`settings wheel on the right side
     
-    [](./develop/images/about_settings.png)
+    ![](./develop/images/about_settings.png)
    
 2. In the pop-up `Edit repository details`: 
     1. tick the `Use your GitHub Pages website` to automatically fill the Website URL 
     
-    [](./develop/images/about_settings2.png)
+    ![](./develop/images/about_settings2.png)
 
     2. press `Save changes`
 
