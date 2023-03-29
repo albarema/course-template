@@ -131,6 +131,17 @@ Once you commit to the webpage branch and the workflow deploys the website to Gi
 
 If you want to create a new template or modify this one, I recommend that you use the [Bioschema Generator tool](http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/).
 
+## Announcement banner
+
+The file `overrides/main.html` also contains a banner announcement showing that the webpage is not finished. Remove the following block once you are done with the website.
+
+```
+{% block announce %}
+Page under construction - course not finalized
+{% endblock %}
+```
+
+
 ## References
 
 References can be used throughout the documentation. They are very easy to use. First, add your citations/references in bib formart to the file `references.bib`. For example:
