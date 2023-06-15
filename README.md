@@ -13,6 +13,7 @@ pip install mkdocs-video
 pip install mkdocs-bibtex 
 pip install neoteroi-mkdocs
 pip install mkdocs-minify-plugin
+pip install mkdocs-git-revision-date-localized-plugin 
 ```
 
 ## Usage

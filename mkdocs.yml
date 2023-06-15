@@ -86,6 +86,8 @@ plugins:
   - minify:   # minify HTML of a page before it is written to disk
       minify_html: true
   - mkdocs-jupyter
+  - git-revision-date-localized:
+      enable_creation_date: true
 
 # Analytics and social media
 extra:
