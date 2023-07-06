@@ -1,7 +1,6 @@
 ---
 title: Rmarkdown example
 summary: This is an example of an Rmarkdown development
-date: 2000-01-01
 tags:
   - rmarkdown
   - R

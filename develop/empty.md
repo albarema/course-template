@@ -1,7 +1,6 @@
 ﻿---
 title: General page
 summary: A brief description of my document.
-date: 2000-01-01
 hide:
   - navigation
 ---
@@ -19,6 +18,8 @@ hide:
 -->
 
 # General Page
+
+**Last updated:** *{{ git_revision_date_localized }}*
 
 !!! note "Section Overview"
 
@@ -87,6 +88,16 @@ Format is similar to links, but include an exclamation mark before:
 
 You can link to a URL or to somewhere locally.
 
+### Tables
+
+You can render tables directly like this:
+
+```
+{{ read_csv('./assets/samplesheet.csv') }}
+```
+
+{{ read_csv('./assets/samplesheet.csv') }}
+
 <!-- Footnote content -->
 
-[^1]: Remember to eat your vegetables. 
+[^1]: Remember to eat your vegetables.

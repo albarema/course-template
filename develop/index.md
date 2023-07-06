@@ -1,7 +1,6 @@
 ---
 title: Name of Page
 summary: A brief description of my document.
-date: 2000-01-01
 hide:
   - navigation
   - toc
@@ -23,7 +22,7 @@ hide:
 # Name of the Course
 </center>
 
-**Updated:** Date last updates
+**Updated:** *{{ git_revision_date_localized }}*
 
 Here is where you will write an abstract about the course. This is an example of the use of citations [@creative_commons_2022]
 
