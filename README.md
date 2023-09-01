@@ -14,6 +14,8 @@ pip install mkdocs-bibtex
 pip install neoteroi-mkdocs
 pip install mkdocs-minify-plugin
 pip install mkdocs-git-revision-date-localized-plugin 
+pip install mkdocs-jupyter
+pip install mkdocs-table-reader-plugin
 ```
 
 ## Usage
